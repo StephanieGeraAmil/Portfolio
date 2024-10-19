@@ -3,7 +3,6 @@ const phrases = [
     "Computer Science Engineer.",
     "Your next project could use my skills!",
     "I'm a dog lover.",
-    "Amateur photographer.",
     "I find joy in serving others and making a difference."
 ];
 
