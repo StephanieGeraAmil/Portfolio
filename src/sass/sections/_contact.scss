@@ -17,6 +17,24 @@
     margin-top: 0;
     -webkit-clip-path: none;
   }
+  .tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding:3vh;
+    margin-bottom: 5vh;
+  }
+  
+  .tech-logo {
+    width: auto;
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tech-logo:hover {
+    transform: scale(1.1);
+  }
 
   .contact-wrapper {
     margin-top: 3.2rem;
