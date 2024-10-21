@@ -1,6 +1,6 @@
 const phrases = [
     "I'm a full-stack developer.",
-    "Computer Science Engineer.",
+    "Software Engineer.",
     "Your next project could use my skills!",
     // "I'm a dog lover.",
       // "I'm a photographer.",
