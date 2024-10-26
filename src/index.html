@@ -11,7 +11,18 @@
     <title>Stephanie Gera| Developer</title>
     <meta name="keywords" content="javascript, typescript, reactjs, nodejs " />
     <meta name="description" content="Stephanie Gera | Developer" />
-
+    <style>
+      #hero {
+        position: relative;
+        z-index: 1; 
+      }
+  
+      #about {
+        position: relative;
+        z-index: 2; 
+      
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +44,7 @@
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
       <div class="video-background">
-        <video autoplay loop muted>
+        <video autoplay loop muted playsinline>
           <source src="assets/hero_cloud.mp4" type="video/mp4" />
         </video>
       
@@ -253,7 +264,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="assets/ttbw.png"
+                      src="assets/ttdeck.png"
                     />
                   </div>
                 </a>
@@ -376,5 +387,12 @@
 
     <script defer type="module" src="index.js"></script>
     <script src="./scripts/writingEffect.js"></script>
+    <script>
+    if (window.innerWidth > 768) {
+      ScrollReveal().reveal('.load-hidden', { delay: 500 });
+    } else {
+      document.querySelectorAll('.load-hidden').forEach(el => el.style.opacity = '1');
+    }
+    </script>
   </body>
 </html>
