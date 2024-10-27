@@ -24,12 +24,21 @@
     gap: 15px;
     padding:3vh;
     margin-bottom: 5vh;
+    @media (max-width:700px) {
+      gap: 20px;
+    padding:4vh;
+      
+    }
   }
   
   .tech-logo {
     width: auto;
     height: 60px;
     transition: transform 0.3s ease;
+    @media (max-width:700px) {
+      height: 40px;
+      
+    }
   }
   
   .tech-logo:hover {
