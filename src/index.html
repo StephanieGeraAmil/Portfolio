@@ -22,20 +22,28 @@
         z-index: 2; 
       
       }
-      .load-hidden {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+      .appear {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+    
+      .appear.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
     </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="styles.scss" />
-    <script
+    <!-- <script
       defer
       src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
-    ></script>
+    ></script> -->
     
 
     
@@ -53,13 +61,13 @@
         </video>
       
       <div class="hero_container">
-        <h1 class="hero-title load-hidden">
+        <h1 class="hero-title appear">
           Hi, my name is <span class="text-color-main">Stephanie</span>
           <!-- <br />
           I'm a Full-Stack developer. -->
         </h1>
         <div class="typing-effect" id="typing"></div>
-        <p class="hero-cta load-hidden">
+        <p class="hero-cta appear">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
             >Know more</a
           >
@@ -75,7 +83,7 @@
   
         <div class="row about-wrapper">
           <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
+            <div class="about-wrapper__image appear">
               <img
                 alt="Profile Image"
                 class="img-fluid rounded shadow-lg"
@@ -88,8 +96,8 @@
           </div>
           <div class="col-md-6 col-sm-12">
             
-            <div class="about-wrapper__info load-hidden">
-              <h2 class="section-title load-hidden">About me</h2>
+            <div class="about-wrapper__info appear">
+              <h2 class="section-title appear">About me</h2>
               <p class="about-wrapper__info-text">
                 I'm a passionated full stack software developer, eager to help individuals and businesses with my skills. I aim to grow by taking on new challenges and solving them.
               </p>
@@ -124,7 +132,7 @@
          
           <div class="row">
             <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
+              <div class="project-wrapper__text appear">
                 <h3 class="project-wrapper__text-title">Fighting Loneliness</h3>
                 <div>
                   <p class="mb-4">
@@ -152,7 +160,7 @@
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
+              <div class="project-wrapper__image appear">
                 <a rel="noreferrer" href="#!" target="_blank">
                   <div
                     data-tilt
@@ -176,7 +184,7 @@
          
           <div class="row">
             <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
+              <div class="project-wrapper__text appear">
                 <h3 class="project-wrapper__text-title">Online Courses Management System</h3>
                 <div>
                   <p class="mb-4">
@@ -204,7 +212,7 @@
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
+              <div class="project-wrapper__image appear">
                 <a rel="noreferrer" href="#!" target="_blank">
                   <div
                     data-tilt
@@ -228,7 +236,7 @@
          
           <div class="row">
             <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
+              <div class="project-wrapper__text appear">
                 <h3 class="project-wrapper__text-title">The Truth</h3>
                 <div>
                   <p class="mb-4">
@@ -256,7 +264,7 @@
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
+              <div class="project-wrapper__image appear">
                 <a rel="noreferrer" href="#!" target="_blank">
                   <div
                     data-tilt
@@ -279,7 +287,7 @@
             
              <div class="row">
               <div class="col-lg-4 col-sm-12">
-                <div class="project-wrapper__text load-hidden">
+                <div class="project-wrapper__text appear">
                   <h3 class="project-wrapper__text-title">Project Buddy</h3>
                   <div>
                     <p class="mb-4">
@@ -307,7 +315,7 @@
                 </div>
               </div>
               <div class="col-lg-8 col-sm-12">
-                <div class="project-wrapper__image load-hidden">
+                <div class="project-wrapper__image appear">
                   <a rel="noreferrer" href="#!" target="_blank">
                     <div
                       data-tilt
@@ -335,7 +343,7 @@
     <!-- **** Contact Section **** -->
     <section id="contact">
       <div class="container">
-        <div class="tech-stack">
+        <div class="tech-stack appear">
           <h2 class="section-title">Tech-stack</h2>
           <div class="tech-logos d-flex flex-wraps">
             <img src="assets/skils/JS.svg" alt="JavaScript Logo" class="tech-logo">
@@ -359,8 +367,8 @@
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <hr />
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
+        <h2 class="section-title appear">Contact</h2>
+        <div class="contact-wrapper appear">
           <p class="contact-wrapper__text">I'm eager to contribute to your team!</p>
           <a
             rel="noreferrer"
@@ -392,11 +400,37 @@
     <script defer type="module" src="index.js"></script>
     <script src="./scripts/writingEffect.js"></script>
     <script>
-    if (window.innerWidth > 768) {
-      ScrollReveal().reveal('.load-hidden', { delay: 500 });
-    } else {
-      document.querySelectorAll('.load-hidden').forEach(el => el.style.opacity = '1');
-    }
+//  document.addEventListener('DOMContentLoaded', function () {
+//   if (window.innerWidth <= 768) { 
+//     document.querySelectorAll('.appear').forEach(el => {
+//       el.style.display = 'block';
+//       el.style.opacity = '1';
+//     });
+//   }
+// });
+// if (window.innerWidth < 768) {
+
+//   document.querySelectorAll('.appear').forEach(el => {
+//     display:inline;
+//   });}
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.appear');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  });
+
+  elements.forEach(el => observer.observe(el));
+});
+
     </script>
   </body>
 </html>
