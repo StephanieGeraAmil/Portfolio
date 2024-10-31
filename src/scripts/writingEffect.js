@@ -4,7 +4,7 @@ const phrases = [
     "Your next project could use my skills!",
     // "I'm a dog lover.",
       // "I'm a photographer.",
-    "I find joy in serving others and making a difference."
+    // "I find joy in serving others and making a difference."
 ];
 
 let phraseIndex = 0; // To keep track of the current phrase
