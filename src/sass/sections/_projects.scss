@@ -79,6 +79,10 @@
           box-shadow: none;
           margin-bottom: 3.2rem;
         }
+
+        @media (max-width: 1400px) {
+          height: auto;
+        }
       }
     }
   }
